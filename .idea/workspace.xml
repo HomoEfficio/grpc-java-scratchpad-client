@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="042885a0-d88e-41a1-82bf-2931bdd78baa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/grpc-java-scratchpad-client.iml" afterPath="$PROJECT_DIR$/.idea/modules/grpc-java-scratchpad-client.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1321,12 +1321,12 @@
       <updated>1491262701421</updated>
       <workItem from="1491262706499" duration="782000" />
       <workItem from="1491361234260" duration="189000" />
-      <workItem from="1491402647168" duration="1137000" />
+      <workItem from="1491402647168" duration="1177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2108000" />
+    <option name="totallyTimeSpent" value="2148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1237" height="777" extended-state="6" />
