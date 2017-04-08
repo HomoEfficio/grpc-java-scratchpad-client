@@ -43,6 +43,35 @@ public class HelloSpringCampGrpcClient {
         logger.info("Unary 서버로부터의 응답: " + response.getWelcomeMessage());
     }
 
+    public void sendAsyncUnaryMessage(String clientName) {
+
+        HelloRequest request = HelloRequest.newBuilder().setClientName(clientName).build();
+
+        logger.info("Async Unary 서비스 호출, 메시지: [" + clientName + "]");
+
+        asyncStub.unaryHello(
+                request,
+                new StreamObserver<HelloResponse>() {
+                    @Override
+                    public void onNext(HelloResponse reeponse) {
+                        logger.info("Async Unary 서버로부터의 응답\n" + reeponse.getWelcomeMessage());
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        logger.log(Level.SEVERE, "Async Unary responseObserver.onError() 호출됨");
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                        logger.info("Async Unary 서버 응답 completed");
+                    }
+                }
+        );
+        
+        logger.info("(NonBlocking이면서) Async니까 서버 응답 기다리지 않고, 결과 신경쓰지 않고 다른 작업 할 수 있다.");
+    }
+
     public void sendAsyncClientStreamingMessage(List<String> clientNames) {
 
         StreamObserver<HelloResponse> responseObserver = new StreamObserver<HelloResponse>() {
