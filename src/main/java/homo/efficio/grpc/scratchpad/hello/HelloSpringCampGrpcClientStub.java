@@ -20,9 +20,9 @@ public class HelloSpringCampGrpcClientStub {
     private final HelloSpringCampGrpc.HelloSpringCampFutureStub futureStub;
 
     public HelloSpringCampGrpcClientStub(String host, int port) {
-        ManagedChannelBuilder channelBuilder = ManagedChannelBuilder.forAddress(host, port)
-                                                                    .usePlaintext(true);
-        this.channel = channelBuilder.build();
+        this.channel = ManagedChannelBuilder.forAddress(host, port)
+                                            .usePlaintext(true)
+                                            .build();
         this.blockingStub = HelloSpringCampGrpc.newBlockingStub(channel);
         this.asyncStub = HelloSpringCampGrpc.newStub(channel);
         this.futureStub = HelloSpringCampGrpc.newFutureStub(channel);
