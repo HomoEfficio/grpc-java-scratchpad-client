@@ -22,11 +22,13 @@ public class HelloSpringCampGrpcClientRunner {
 
 //        grpcClient.sendBlockingUnaryMessage("homo.efficio");
 
-        grpcClient.sendAsyncClientStreamingMessage(
-                Arrays.asList("클라이언트 스트리밍", "gRPC", "스프링캠프 2017")
-        );
+//        grpcClient.sendAsyncClientStreamingMessage(
+//                Arrays.asList("클라이언트 스트리밍", "gRPC", "스프링캠프 2017")
+//        );
+//        Thread.sleep(2000);
 
-        Thread.sleep(2000);
+        grpcClient.sendAsyncUnaryMessage("Async Unary homo.efficio");
+        Thread.sleep(4000);
 
         clientStub.shutdown();
     }
