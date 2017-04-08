@@ -1,6 +1,5 @@
 package homo.efficio.grpc.scratchpad.hello;
 
-import io.grpc.Channel;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -9,7 +8,7 @@ import java.util.logging.Logger;
 
 /**
  * @author homo.efficio@gmail.com
- *         created on 2017. 4. 6.
+ *         created on 2017-04-08.
  */
 public class HelloSpringCampGrpcClientStub {
 
